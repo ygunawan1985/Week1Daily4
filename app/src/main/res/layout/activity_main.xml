@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/StandardTitleStyle"
+        android:text="@string/guest_details"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:hint="Enter First Name"
+        app:layout_constraintTop_toBottomOf="@id/titleDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:hint="Enter Last Name"
+        app:layout_constraintTop_toBottomOf="@id/etFirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etStreetAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:hint="Enter Street Address"
+        app:layout_constraintTop_toBottomOf="@id/etLastName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:hint="Enter City"
+        app:layout_constraintTop_toBottomOf="@id/etStreetAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/etState" />
+
+    <EditText
+        android:id="@+id/etState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:hint="State"
+        app:layout_constraintTop_toBottomOf="@id/etStreetAddress"
+        app:layout_constraintStart_toEndOf="@id/etCity"
+        app:layout_constraintEnd_toStartOf="@id/etZipCode" />
+
+    <EditText
+        android:id="@+id/etZipCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:hint="Zip Code"
+        app:layout_constraintTop_toBottomOf="@id/etStreetAddress"
+        app:layout_constraintStart_toEndOf="@id/etState"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_button"
+        app:layout_constraintTop_toBottomOf="@id/etState"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onClick" />
+
+    <TextView
+        android:id="@+id/firstNameDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/btnSubmit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lastNameDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/firstNameDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/streetAddressDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/lastNameDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/cityDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/streetAddressDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/stateDisplay" />
+
+    <TextView
+        android:id="@+id/stateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/streetAddressDisplay"
+        app:layout_constraintStart_toEndOf="@id/cityDisplay"
+        app:layout_constraintEnd_toStartOf="@id/zipCodeDisplay" />
+
+    <TextView
+        android:id="@+id/zipCodeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/StandardTextStyle"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/streetAddressDisplay"
+        app:layout_constraintStart_toEndOf="@id/stateDisplay"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
